@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Driving Test Slot Management System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Driving Test Slot Management System</h1>
+  <p>Register, book, reschedule or cancel your driving test slot</p>
+</header>
+
+<nav>
+  <button onclick="showSection('register', this)" class="active">Register</button>
+  <button onclick="showSection('slots', this)">Available Slots</button>
+  <button onclick="showSection('book', this)">Book Slot</button>
+  <button onclick="showSection('manage', this)">My Booking</button>
+  <button onclick="showSection('admin', this)">Admin Panel</button>
+</nav>
+
+<div class="container">
+
+  <div id="register" class="section show card">
+    <h2>Applicant Registration</h2>
+    <label>Full Name <input type="text" id="r_name" placeholder="Enter your name"></label>
+    <label>Age <input type="number" id="r_age" placeholder="Minimum 18"></label>
+    <label>Phone Number <input type="text" id="r_phone" placeholder="10 digit number"></label>
+    <label>Vehicle Category
+      <select id="r_cat">
+        <option>Two Wheeler</option>
+        <option>Four Wheeler (Car)</option>
+        <option>Heavy Vehicle</option>
+      </select>
+    </label>
+    <button class="btn" onclick="registerApplicant()">Register</button>
+    <div id="r_msg" class="msg"></div>
+  </div>
+
+  <div id="slots" class="section card">
+    <h2>Available Slots</h2>
+    <p class="small">Each slot has limited seats. Full slots cannot be booked.</p>
+    <div class="tablewrap" id="slotTable"></div>
+  </div>
+
+  <div id="book" class="section card">
+    <h2>Book a Test Slot</h2>
+    <label>Applicant ID <input type="text" id="b_id" placeholder="Example: DT101"></label>
+    <label>Choose Slot <select id="b_slot"></select></label>
+    <button class="btn" onclick="bookSlot()">Book Now</button>
+    <div id="b_msg" class="msg"></div>
+  </div>
+
+  <div id="manage" class="section card">
+    <h2>My Booking</h2>
+    <label>Applicant ID <input type="text" id="m_id" placeholder="Example: DT101"></label>
+    <button class="btn" onclick="findBooking()">Check Status</button>
+    <div id="m_msg" class="msg"></div>
+    <div id="m_details"></div>
+  </div>
+
+  <div id="admin" class="section card">
+    <h2>Admin Panel (Testing Authority)</h2>
+    <h3>Add New Slot</h3>
+    <label>Date <input type="date" id="a_date"></label>
+    <label>Time <input type="time" id="a_time"></label>
+    <label>Seats <input type="number" id="a_seats" value="3"></label>
+    <button class="btn" onclick="addSlot()">Add Slot</button>
+    <div id="a_msg" class="msg"></div>
+
+    <h3>All Applicants and Bookings</h3>
+    <div class="tablewrap" id="adminTable"></div>
+  </div>
+
+</div>
+
+<footer>Mini Project - HTML, CSS and JavaScript | Copyright are Reserved | Project created by
+
+<script src="script.js"></script>
+</body>
+</html>
