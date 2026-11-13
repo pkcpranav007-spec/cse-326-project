@@ -16,3 +16,7 @@
 -HTML
 -CSS
 -JavaScript
+
+## Known Limitations- Single-user local storage only; cloud sync is out of scope for v1.0.
+## Maintainer
+Maintained by Pranav Kuamr Chaudhary (B.Tech CSE, Lovely Professional University).
