@@ -1,7 +1,7 @@
 # Driving Test Slot Management System
 
-Driving test centers handle large numbers of applicants and limited test slots, making scheduling conflicts and uneven allocation common.
-I have Created a slot-management system for applicants and testing authorities.
+-Driving test centers handle large numbers of applicants and limited test slots, making scheduling conflicts and uneven allocation common.
+#I have Created a slot-management system for applicants and testing authorities.
 
 ##Features
 -Applicant registration
