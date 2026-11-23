@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Driving Test Slot Management System</title>
+<!--Link to CSS file that styles this page  -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,6 +14,7 @@
   <p>Register, book, reschedule or cancel your driving test slot</p>
 </header>
 
+<!-- Navigation Bar  -->
 <nav>
   <button onclick="showSection('register', this)" class="active">Register</button>
   <button onclick="showSection('slots', this)">Available Slots</button>
@@ -21,8 +23,10 @@
   <button onclick="showSection('admin', this)">Admin Panel</button>
 </nav>
 
+<!-- Main Content: holds all the sections -->
 <div class="container">
 
+<!-- Section 01: Application Registration Form -->
   <div id="register" class="section show card">
     <h2>Applicant Registration</h2>
     <label>Full Name <input type="text" id="r_name" placeholder="Enter your name"></label>
@@ -36,15 +40,18 @@
       </select>
     </label>
     <button class="btn" onclick="registerApplicant()">Register</button>
+    <!--success or error message appears here  -->
     <div id="r_msg" class="msg"></div>
   </div>
 
+<!-- Section 02: Table of all slots and their remaining seats. -->
   <div id="slots" class="section card">
     <h2>Available Slots</h2>
     <p class="small">Each slot has limited seats. Full slots cannot be booked.</p>
     <div class="tablewrap" id="slotTable"></div>
   </div>
 
+<!-- Section 03: Book a slot using the Application ID. -->
   <div id="book" class="section card">
     <h2>Book a Test Slot</h2>
     <label>Applicant ID <input type="text" id="b_id" placeholder="Example: DT101"></label>
@@ -53,6 +60,7 @@
     <div id="b_msg" class="msg"></div>
   </div>
 
+<!-- Section 04: Check booking status, reschedule or cancle. -->
   <div id="manage" class="section card">
     <h2>My Booking</h2>
     <label>Applicant ID <input type="text" id="m_id" placeholder="Example: DT101"></label>
@@ -61,6 +69,7 @@
     <div id="m_details"></div>
   </div>
 
+<!-- Section 05: Admin panel for the testing authority -->
   <div id="admin" class="section card">
     <h2>Admin Panel (Testing Authority)</h2>
     <h3>Add New Slot</h3>
@@ -70,6 +79,7 @@
     <button class="btn" onclick="addSlot()">Add Slot</button>
     <div id="a_msg" class="msg"></div>
 
+<!-- Table of all bookings -->
     <h3>All Applicants and Bookings</h3>
     <div class="tablewrap" id="adminTable"></div>
   </div>
@@ -78,6 +88,8 @@
 
 <footer>Mini Project - HTML, CSS and JavaScript | Copyright are Reserved | Project created for CA2</footer>
 
+<!-- Load the JavaScript last so all the the elements above already exist  -->
 <script src="script.js"></script>
 </body>
 </html>
+
